@@ -1,23 +1,29 @@
 import './App.css';
-import { MainDiv, WeatherDiv } from './styled-components/WeatherContainer';
+import { MainDiv } from './styled-components/WeatherContainer';
 import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { addWeather, fetchWeather } from './reducers/weatherReducer'
+import { fetchCurrentWeather } from './reducers/weatherReducer'
+import { fetchForecast } from './reducers/forecastReducer'
+import Weather from './components/Weather';
+import Header from './components/Header'
 
 function App() {
   const dispatch = useDispatch()
+  const currentData = useSelector(state => state.weatherReducer)
+  const forecastData = useSelector(state => state.forecastReducer)
 
   useEffect(() => {
-    dispatch(fetchWeather())
+    dispatch(fetchCurrentWeather())
+    dispatch(fetchForecast())
     }
-  , [])
+  , []
+  )
 
   return (
     <MainDiv className="App">
-      <WeatherDiv>
-        Weather
-      </WeatherDiv>
+      <Header/>
+      <Weather forecastData = {forecastData}/>
     </MainDiv>
   );
 }
