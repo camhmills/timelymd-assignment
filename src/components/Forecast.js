@@ -12,10 +12,16 @@ function Forecast() {
         return formatDate
     }
 
-    console.log(getFormattedDate('1638986400'))
     return (
         <ForecastContainer>
-            {forecast?.weatherForecast?.daily.slice(1).map((day, index) => <ForecastDiv key={index}>{getFormattedDate(day.dt)}</ForecastDiv>)}
+            {forecast?.weatherForecast?.daily
+                ?.slice(1)
+                    ?.map((day, index) => 
+                        <ForecastDiv key={index}>
+                            {getFormattedDate(day?.dt)}
+                        </ForecastDiv>
+                        )
+                    }
         </ForecastContainer>
     )
 }

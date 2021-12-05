@@ -10,8 +10,6 @@ import Header from './components/Header'
 
 function App() {
   const dispatch = useDispatch()
-  const currentData = useSelector(state => state.weatherReducer)
-  const forecastData = useSelector(state => state.forecastReducer)
 
   useEffect(() => {
     dispatch(fetchCurrentWeather())
@@ -23,7 +21,7 @@ function App() {
   return (
     <MainDiv className="App">
       <Header/>
-      <Weather forecastData = {forecastData}/>
+      <Weather/>
     </MainDiv>
   );
 }

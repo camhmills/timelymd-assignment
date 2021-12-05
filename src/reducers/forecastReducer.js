@@ -21,7 +21,9 @@ const forecastSlice = createSlice({
         }
     }, 
     extraReducers: builder => {
-        builder.addCase(fetchForecast.fulfilled, (state, action) => {
+        builder.addCase(fetchForecast.pending, (state, action) => {
+            state.weatherForecast = []
+        }).addCase(fetchForecast.fulfilled, (state, action) => {
             state.weatherForecast = action.payload
         })
     }

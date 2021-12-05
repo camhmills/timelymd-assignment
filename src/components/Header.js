@@ -4,7 +4,13 @@ import { HeaderDiv } from '../styled-components/WeatherContainer'
 export default function Header() {
     return (
         <HeaderDiv>
-            Header
+            <form>
+                <input placeholder = "Enter city name">
+                </input>
+                <button>
+                    Search
+                </button>
+            </form>
         </HeaderDiv>
     )
 }
