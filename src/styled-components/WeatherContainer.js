@@ -3,27 +3,48 @@ import styled from "styled-components";
 export const MainDiv = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: center;
-align-items: center;
 height: 100vh;
 width: 100vw
 `
 
+export const SubDiv = styled.div`
+height: 89.5vh
+width: 100vw;
+`
+
 export const HeaderDiv = styled.div`
 display: flex;
-height: 75px;
+justify-content: center;
+align-items: center;
+min-height: 75px;
 width: 100vw;
-border: 1px solid black;
-margin-bottom: 25px;
+color: #FAFAFA;
+background-color: #2F2C2C;
+`
+
+export const HeaderInput = styled.input`
+border: none;
+font-size: 16px;
+height: 35px;
+width: 260px;
+text-align: center;
+&:focus {
+    outline: none;
+}
+`
+
+export const HeaderButton = styled.button`
+border: none;
+text-align: center;
+
 `
 
 export const WeatherDiv = styled.div`
 display: flex;
 flex-direction: column;
+align-items: center;
 min-height: 500px;
-height: 100vh;
-width: 75vw;
-background-color: blue;
+width: 100vw;
 `
 
 export const CurrentWeatherDiv = styled.div`
@@ -31,6 +52,7 @@ display: flex;
 min-height: 300px;
 width: 100%;
 border: 1px solid black;
+margin-bottom: 5px;
 `
 
 export const ForecastContainer = styled.div`
