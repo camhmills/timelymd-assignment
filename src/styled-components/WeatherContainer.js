@@ -22,6 +22,12 @@ color: #FAFAFA;
 background-color: #2F2C2C;
 `
 
+export const HeaderForm = styled.form`
+display: flex;
+justify-content: center;
+width: 50%;
+`
+
 export const HeaderInput = styled.input`
 border: none;
 font-size: 16px;
@@ -36,7 +42,7 @@ text-align: center;
 export const HeaderButton = styled.button`
 border: none;
 text-align: center;
-height: 38px;
+height: 37px;
 width: 100px;
 `
 
