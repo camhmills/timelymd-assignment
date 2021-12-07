@@ -22,7 +22,7 @@ function Forecast() {
             <h2>{day?.temp?.min.toFixed(0)}°</h2>
           </TempDiv>
           <ForecastWeatherImg src={iconPicker(day?.weather[0]?.description)} />
-          <h4>{day?.weather[0]?.main}</h4>
+          <ForeCastH4>{day?.weather[0]?.main}</ForeCastH4>
         </ForecastDiv>
       ))}
     </ForecastContainer>
