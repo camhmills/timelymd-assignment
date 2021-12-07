@@ -2,9 +2,9 @@
   "name": "timelymd",
   "version": "0.1.0",
   "private": true,
-  "engines" : {
+  "engines": {
     "node" : "v14.17.4"
-  }
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^5.15.1",
