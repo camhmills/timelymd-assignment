@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { fetchCurrentWeather } from "../reducers/weatherReducer";
-import { HeaderDiv, HeaderInput } from "../styled-components/WeatherContainer";
+import { HeaderButton, HeaderDiv, HeaderInput } from "../styled-components/WeatherContainer";
 import { useDispatch } from "react-redux";
 
 export default function Header() {
@@ -21,7 +21,7 @@ export default function Header() {
           name="location"
           onChange={(e) => setCityName(e.target.value)}
         />
-        <button>Search</button>
+        <HeaderButton>Search</HeaderButton>
       </form>
     </HeaderDiv>
   );

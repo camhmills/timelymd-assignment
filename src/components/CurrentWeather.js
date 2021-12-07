@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { CurrentWeatherDiv } from "../styled-components/WeatherContainer";
 import { useSelector } from "react-redux";
-import { iconPicker, icons } from "../middleware/functions";
+import { iconPicker } from "../middleware/functions";
 
 export default function CurrentWeather() {
   const current = useSelector((state) => state.weatherReducer);
@@ -10,15 +10,19 @@ export default function CurrentWeather() {
 
   return (
     <CurrentWeatherDiv>
-      {current?.CurrentWeather?.current?.temp}
+      
       {current.CurrentWeather.length === 0 ? (
         <h1>Please Search for a City!</h1>
       ) : (
-        <img
-          src={iconPicker(
-            current?.CurrentWeather?.current?.weather[0]?.description
-          )}
-        ></img>
+        <div>
+          <h2>Today</h2>
+          <h1>{current?.CurrentWeather?.current?.temp}</h1>
+          <img
+            src={iconPicker(
+              current?.CurrentWeather?.current?.weather[0]?.description
+            )}
+          />
+        </div>
       )}
     </CurrentWeatherDiv>
   );

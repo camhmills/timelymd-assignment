@@ -12,6 +12,9 @@ export const iconPicker = (weather) => {
       }
       return cloudy;
     }
+    if (weather.search("mist") >= 0) {
+        return cloudy;
+    }
     if (weather.search("rain") >= 0) {
       return rain;
     }
