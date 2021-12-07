@@ -1,9 +1,10 @@
 import React from "react";
 import {
   CurrentWeatherDiv,
+  CurrentWeatherGraph,
   CurrentWeatherImg,
   CurrentWeatherInfoDiv,
-  CurrentWeatherInfoH4,
+  CurrentWeatherInfoH3,
   CurrentWeatherMoreInfo,
   CurrentWeatherSubDiv,
   CurrentWeatherTemp,
@@ -34,37 +35,38 @@ export default function CurrentWeather() {
             <h1>{current?.CurrentWeather?.current?.weather[0]?.main}</h1>
           </CurrentWeatherInfoDiv>
           <CurrentWeatherMoreInfo>
-            <CurrentWeatherInfoH4>
+            <CurrentWeatherInfoH3>
               Feels Like:{" "}
               {current?.CurrentWeather?.current?.feels_like.toFixed(0)}°F
-            </CurrentWeatherInfoH4>
-            <CurrentWeatherInfoH4>
-              Atmo. Pressure: {current?.CurrentWeather?.current?.pressure}{" "}
-              hPa
-            </CurrentWeatherInfoH4>
-            <CurrentWeatherInfoH4>
-              Humidity: {current?.CurrentWeather?.current?.humidity}%
-            </CurrentWeatherInfoH4>
-            <CurrentWeatherInfoH4>
+            </CurrentWeatherInfoH3>
+            <CurrentWeatherInfoH3>
+              Atmo. Pressure:{" "}
+              {current?.CurrentWeather?.current?.pressure} hPa
+            </CurrentWeatherInfoH3>
+            <CurrentWeatherInfoH3>
+              Humidity:{" "}
+              {current?.CurrentWeather?.current?.humidity}%
+            </CurrentWeatherInfoH3>
+            <CurrentWeatherInfoH3>
               Dew Point:{" "}
               {current?.CurrentWeather?.current?.dew_point.toFixed(0)}°F
-            </CurrentWeatherInfoH4>
-            <CurrentWeatherInfoH4>
+            </CurrentWeatherInfoH3>
+            <CurrentWeatherInfoH3>
               UV Index:{" "}
               {current?.CurrentWeather?.current?.uvi.toFixed(2)}
-            </CurrentWeatherInfoH4>
-            <CurrentWeatherInfoH4>
+            </CurrentWeatherInfoH3>
+            <CurrentWeatherInfoH3>
               Cloud Coverage:{" "}
               {current?.CurrentWeather?.current?.clouds}%
-            </CurrentWeatherInfoH4>
-            <CurrentWeatherInfoH4>
+            </CurrentWeatherInfoH3>
+            <CurrentWeatherInfoH3>
               Wind Speed:{" "}
               {current?.CurrentWeather?.current?.wind_speed.toFixed(0)} mph
-            </CurrentWeatherInfoH4>
-            <CurrentWeatherInfoH4>
+            </CurrentWeatherInfoH3>
+            <CurrentWeatherInfoH3>
               Visibility:{" "}
               {current?.CurrentWeather?.current?.visibility} feet
-            </CurrentWeatherInfoH4>
+            </CurrentWeatherInfoH3>
           </CurrentWeatherMoreInfo>
         </CurrentWeatherSubDiv>
       )}

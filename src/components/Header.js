@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { fetchCurrentWeather } from "../reducers/weatherReducer";
-import { HeaderButton, HeaderDiv, HeaderForm, HeaderInput } from "../styled-components/WeatherContainer";
+import {
+  HeaderButton,
+  HeaderDiv,
+  HeaderForm,
+  HeaderInput,
+} from "../styled-components/WeatherContainer";
 import { useDispatch } from "react-redux";
 
 export default function Header() {

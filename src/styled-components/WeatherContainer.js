@@ -44,6 +44,11 @@ border: none;
 text-align: center;
 height: 37px;
 width: 100px;
+font-size: 18px;
+transition-duration: .5s;
+&:hover {
+    background: #00D4FF
+}
 `
 
 export const WeatherDiv = styled.div`
@@ -51,15 +56,16 @@ display: flex;
 flex-direction: column;
 align-items: center;
 min-height: 500px;
-width: 100vw;
+max-width: 100vw;
 `
 
 export const CurrentWeatherDiv = styled.div`
 display: flex;
 min-height: 300px;
+max-width: 1000px;
 width: 75%;
 border-radius: 3px;
-margin-top: 5px;
+margin-top: 10px;
 margin-bottom: 5px;
 background-color: #FFFFFF;
 `
@@ -83,11 +89,11 @@ width: 33%;
 
 export const CurrentWeatherMoreInfo = styled.div`
 display: grid;
-grid-template-columns: repeat(2, 1fr);
+grid-template-columns: 1fr 1fr;
 width: 64%;
 `
 
-export const CurrentWeatherInfoH4 = styled.h3`
+export const CurrentWeatherInfoH3 = styled.h3`
 display: flex;
 align-items: center;
 justify-content: center;
@@ -122,6 +128,7 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 height: 125px;
+max-width: 1000px;
 width: 75vw;
 border-radius: 3px;
 background-color: #FFFFFF;
@@ -135,9 +142,10 @@ flex-direction: row;
 width: 25%;
 `
 
-export const ForeCastH4 = styled.h4`
+export const ForeCastH2 = styled.h2`
 display: flex;
 align-items: center;
 justify-content: center;
 width: 100px;
+font-size: 20px;
 `
