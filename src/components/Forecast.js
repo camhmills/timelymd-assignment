@@ -4,7 +4,7 @@ import {
   ForecastDiv,
   ForeCastH4,
   ForecastWeatherImg,
-  TempDiv,
+  TempMinMaxDiv,
 } from "../styled-components/WeatherContainer";
 import { useSelector } from "react-redux";
 import { iconPicker, getFormattedDate } from "../middleware/functions";
@@ -17,10 +17,11 @@ function Forecast() {
       {forecast?.CurrentWeather?.daily?.slice(1)?.map((day, index) => (
         <ForecastDiv key={index}>
           <ForeCastH4>{getFormattedDate(day?.dt)}</ForeCastH4>
-          <TempDiv>
-            <h1>{day?.temp?.max.toFixed(0)}°/</h1>
-            <h2>{day?.temp?.min.toFixed(0)}°</h2>
-          </TempDiv>
+          <TempMinMaxDiv>
+            <h1>{day?.temp?.max.toFixed(0)}°F/</h1>
+            <h2>{day?.temp?.min.toFixed(0)}°F</h2>
+          </TempMinMaxDiv>
+          <h5>Feels like: {day?.feels_like?.day.toFixed(0)}°F</h5>
           <ForecastWeatherImg src={iconPicker(day?.weather[0]?.description)} />
           <ForeCastH4>{day?.weather[0]?.main}</ForeCastH4>
         </ForecastDiv>

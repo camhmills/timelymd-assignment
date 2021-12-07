@@ -37,7 +37,7 @@ export const HeaderButton = styled.button`
 border: none;
 text-align: center;
 height: 38px;
-width: 50px;
+width: 100px;
 `
 
 export const WeatherDiv = styled.div`
@@ -52,11 +52,52 @@ export const CurrentWeatherDiv = styled.div`
 display: flex;
 min-height: 300px;
 width: 75%;
-border: 1px solid black;
+border-radius: 3px;
 margin-top: 5px;
 margin-bottom: 5px;
 background-color: #FFFFFF;
 `
+export const CurrentWeatherImg = styled.img`
+
+`
+
+export const CurrentWeatherSubDiv = styled.div`
+display: flex;
+flex-direction: row;
+width: 100%;
+`
+
+export const CurrentWeatherInfoDiv = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+width: 33%;
+`
+
+export const CurrentWeatherMoreInfo = styled.div`
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+width: 64%;
+`
+
+export const CurrentWeatherInfoH4 = styled.h3`
+display: flex;
+align-items: center;
+justify-content: center;
+border-bottom: 1px solid #2C2C2C;
+`
+
+export const CurrentWeatherToday = styled.h2`
+margin-top: 10px;
+margin-bottom: 0px;
+`
+
+export const CurrentWeatherTemp = styled.h1`
+margin-top: 10px;
+margin-bottom: 0px;
+`
+
 export const ForecastWeatherImg = styled.img`
 height: 128px;
 width: 128px;
@@ -76,13 +117,14 @@ justify-content: space-around;
 align-items: center;
 height: 125px;
 width: 75vw;
-border: 1px solid black;
+border-radius: 3px;
 background-color: #FFFFFF;
 `
 
-export const TempDiv = styled.div`
+export const TempMinMaxDiv = styled.div`
 display: flex;
 align-items: center;
+justify-content: center;
 flex-direction: row;
 width: 25%;
 `
@@ -90,6 +132,6 @@ width: 25%;
 export const ForeCastH4 = styled.h4`
 display: flex;
 align-items: center;
-text-align: center;
+justify-content: center;
 width: 100px;
 `
