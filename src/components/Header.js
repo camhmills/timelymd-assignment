@@ -13,8 +13,10 @@ import { useDispatch, useSelector } from "react-redux";
 export default function Header() {
   const [cityname, setCityName] = useState("");
   const cityHistory = useSelector((state) => state.addCityReducer);
-  const lastSearch = cityHistory.slice(0, 3);
+  const lastSearch = cityHistory.slice(0, 2);
   const dispatch = useDispatch();
+
+  console.log(lastSearch);
 
   const formSubmit = (e) => {
     e.preventDefault();
@@ -25,7 +27,7 @@ export default function Header() {
 
   const historyLink = (e) => {
     e.preventDefault();
-    dispatch(fetchCurrentWeather(cityname));
+    dispatch(fetchCurrentWeather(lastSearch[1]));
   };
 
   return (
@@ -41,11 +43,9 @@ export default function Header() {
         <HeaderButton>Search</HeaderButton>
       </HeaderForm>
       <HeaderSpaceDiv>
-        {lastSearch.map((city) => (
-          <HeaderHistoryButton onClick={historyLink}>
-            {city}
-          </HeaderHistoryButton>
-        ))}
+        <HeaderHistoryButton onClick={historyLink}>
+          {lastSearch[1]}
+        </HeaderHistoryButton>
       </HeaderSpaceDiv>
     </HeaderDiv>
   );
