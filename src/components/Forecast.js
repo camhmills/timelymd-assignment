@@ -3,6 +3,7 @@ import {
   ForecastContainer,
   ForecastDiv,
   ForeCastH2,
+  ForecastH3,
   ForecastWeatherImg,
   TempMinMaxDiv,
 } from "../styled-components/WeatherContainer";
@@ -21,7 +22,7 @@ function Forecast() {
             <h1>{day?.temp?.max.toFixed(0)}°F/</h1>
             <h2>{day?.temp?.min.toFixed(0)}°F</h2>
           </TempMinMaxDiv>
-          <h3>Feels like: {day?.feels_like?.day.toFixed(0)}°F</h3>
+          <ForecastH3>Feels like: {day?.feels_like?.day.toFixed(0)}°F</ForecastH3>
           <ForecastWeatherImg src={iconPicker(day?.weather[0]?.description)} />
           <ForeCastH2>{day?.weather[0]?.main}</ForeCastH2>
         </ForecastDiv>
