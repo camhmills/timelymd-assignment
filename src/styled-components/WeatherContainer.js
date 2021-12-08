@@ -15,11 +15,13 @@ width: 100vw;
 export const HeaderDiv = styled.div`
 display: flex;
 justify-content: center;
+position: fixed;
 align-items: center;
 min-height: 75px;
 width: 100vw;
 color: #FAFAFA;
 background-color: #2F2C2C;
+z-index: 2;
 `
 
 export const HeaderSpaceDiv = styled.div`
@@ -78,10 +80,12 @@ margin-left: 20px;
 
 export const WeatherDiv = styled.div`
 display: flex;
+margin-top: 90px;
 flex-direction: column;
 align-items: center;
 min-height: 500px;
 max-width: 100vw;
+position: sticky;
 `
 
 export const CurrentWeatherDiv = styled.div`
@@ -187,6 +191,18 @@ width: 25%;
 `
 
 export const ForeCastH2 = styled.h2`
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100px;
+font-size: 20px;
+@media screen and (max-width: 580px) {
+    font-size: 15px;
+    justify-content: flex-start;
+}
+`
+
+export const ForeCastStatus = styled.h2`
 display: flex;
 align-items: center;
 justify-content: center;
