@@ -25,7 +25,9 @@ background-color: #2F2C2C;
 export const HeaderSpaceDiv = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: space-around;
+justify-content: center;
+align-items: center;
+font-size: 20px;
 width: 100%;
 @media screen and (max-width: 1000px) {
     display: none;
@@ -68,6 +70,7 @@ height: 47px;
 width: 100px;
 font-size: 22px;
 transition-duration: .5s;
+margin-left: 20px;
 &:hover {
     background: #00D4FF
 }

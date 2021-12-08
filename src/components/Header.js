@@ -43,6 +43,7 @@ export default function Header() {
         <HeaderButton>Search</HeaderButton>
       </HeaderForm>
       <HeaderSpaceDiv>
+        <p>Last City Searched:{" "}</p>
         <HeaderHistoryButton onClick={historyLink}>
           {lastSearch[1]}
         </HeaderHistoryButton>
